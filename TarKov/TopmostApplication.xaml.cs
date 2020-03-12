@@ -27,9 +27,10 @@ namespace TarKov
     /// </summary> 
     /// 
 
-
-    public partial class MainWindow : System.Windows.Window
+		 
+	public partial class MainWindow : System.Windows.Window
     {
+        public Overlay ov = new Overlay();
         public ChromiumWebBrowser ChromiumBrowser;
         public bool isDevMode = false;
         [DllImport("kernel32.dll")]
@@ -42,21 +43,27 @@ namespace TarKov
             ChromeInit("https://tarkov-market.com/");
             InputHelper.Init();
             AppHandler.Init(this);
-            NetStat.Test();
+            NetStat.Test(); 
+            Thread thread = new Thread(new ThreadStart(ov.Run));
+            thread.Start();
+
+            this.Topmost = false;
+            this.Hide();
         }
         void Setup()
         {
-            this.Topmost = true;
+  
             var _width = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width;
             var _height = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
             this.Width = _width;
             this.Height = _height;
             this.AppGrid.Width = _width;
-            this.AppGrid.Height = _height;
+            this.AppGrid.Height = _height; 
+
         }
         public void ChromeInit(string url)
         {
-           
+
             CefSettings chromium = new CefSettings();
             Cef.Initialize(chromium);
             ChromiumBrowser = new ChromiumWebBrowser();
@@ -104,7 +111,7 @@ namespace TarKov
         }
         private void Button_Weapons(object sender, RoutedEventArgs e)
         {
-            BrowserHelper.VisitContent(EContent.WEAPON) ;
+            BrowserHelper.VisitContent(EContent.WEAPON);
         }
 
         public void Button_Quest(object sender, RoutedEventArgs e)
@@ -149,7 +156,7 @@ namespace TarKov
         }
         public void Button_Help(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(" Insert : Close/Open \n ESC : Close \n Same Button Double Click : Return to Original URL","shlifedev@gmail.com", MessageBoxButton.OK);
+            MessageBox.Show(" Insert : Close/Open \n ESC : Close \n Same Button Double Click : Return to Original URL", "shlifedev@gmail.com", MessageBoxButton.OK);
         }
 
         private void HideMap(object sender, RoutedEventArgs e)

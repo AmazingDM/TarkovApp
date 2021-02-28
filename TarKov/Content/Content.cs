@@ -1,6 +1,4 @@
-﻿using CefSharp;
-using CefSharp.Wpf;
-using System;
+﻿using CefSharp.Wpf;
 using System.Collections.Generic;
 using System.Windows;
 using TarKov;
@@ -14,7 +12,7 @@ public class BrowserData
     }
     public string URL;
     public bool Init = false;
-    public EContent content; 
+    public EContent content;
     public string LatestURL;
     public double LatestScrollHeight;
     public int Width;
@@ -26,27 +24,27 @@ public static class BrowserHelper
     public static EContent CurrentCotnent;
     public static MainWindow MainWindow;
     public static ChromiumWebBrowser Browser;
-    public static Dictionary<EContent, BrowserData> ContentMap = new Dictionary<EContent, BrowserData>(); 
+    public static Dictionary<EContent, BrowserData> ContentMap = new Dictionary<EContent, BrowserData>();
     public static void Init()
-    { 
+    {
         ContentMap.Add(EContent.QUEST, new BrowserData("https://escapefromtarkov-zh.gamepedia.com/Quests", 1000));
         ContentMap.Add(EContent.ARMOR, new BrowserData("https://escapefromtarkov-zh.gamepedia.com/Armor_vests", 1000));
         ContentMap.Add(EContent.MARKET, new BrowserData("https://tarkov-market.com/cn/", 800));
         ContentMap.Add(EContent.AMMO, new BrowserData("https://escapefromtarkov-zh.gamepedia.com/Ballistics", 1000));
         ContentMap.Add(EContent.WEAPON, new BrowserData("https://escapefromtarkov-zh.gamepedia.com/Weapons", 1000));
-    } 
+    }
 
-    
+
     public static void VisitContent(EContent content)
     {
         if (ContentMap.Count == 0)
             Init();
 
-       
+
         if (content != CurrentCotnent && CurrentCotnent != EContent.NONE)
-        { 
+        {
             var currentContent = ContentMap[CurrentCotnent];
-            currentContent.LatestURL = Browser.Address;  
+            currentContent.LatestURL = Browser.Address;
         }
         else
         {
@@ -55,14 +53,14 @@ public static class BrowserHelper
                 var currentContent = ContentMap[CurrentCotnent];
                 if (currentContent.LatestURL == Browser.Address)
                 {
-                    currentContent.LatestURL = currentContent.URL; 
+                    currentContent.LatestURL = currentContent.URL;
                 }
             }
         }
 
         CurrentCotnent = content;
-        MapHandler.HideAndBrowserShow(); 
-   
+        MapHandler.HideAndBrowserShow();
+
         //get content data
         var visitContent = ContentMap[content];
 
@@ -74,8 +72,8 @@ public static class BrowserHelper
         }
 
         //white bg execute
-        MainWindow.whiteBackground.Visibility = (visitContent.TransparentBody == true) ? Visibility.Visible : Visibility.Hidden; 
-       
+        MainWindow.whiteBackground.Visibility = (visitContent.TransparentBody == true) ? Visibility.Visible : Visibility.Hidden;
+
         //get url
         var url = visitContent.LatestURL;
         var scroll = visitContent.LatestScrollHeight;
@@ -83,6 +81,6 @@ public static class BrowserHelper
         Browser.Visibility = Visibility.Visible;
         Browser.HorizontalAlignment = HorizontalAlignment.Left;
         Browser.Width = visitContent.Width;
-        Browser.Load(visitContent.LatestURL); 
+        Browser.Load(visitContent.LatestURL);
     }
 }

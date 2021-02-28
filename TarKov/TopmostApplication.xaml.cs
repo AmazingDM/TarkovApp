@@ -1,25 +1,8 @@
 ﻿using CefSharp;
 using CefSharp.Wpf;
-using Gma.System.MouseKeyHook;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Interop;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 namespace TarKov
 {
     /// <summary>
@@ -55,7 +38,7 @@ namespace TarKov
         }
         public void ChromeInit(string url)
         {
-           
+
             CefSettings chromium = new CefSettings();
             Cef.Initialize(chromium);
             ChromiumBrowser = new ChromiumWebBrowser();
@@ -103,7 +86,7 @@ namespace TarKov
         }
         private void Button_Weapons(object sender, RoutedEventArgs e)
         {
-            BrowserHelper.VisitContent(EContent.WEAPON) ;
+            BrowserHelper.VisitContent(EContent.WEAPON);
         }
 
         public void Button_Quest(object sender, RoutedEventArgs e)
@@ -138,7 +121,16 @@ namespace TarKov
         /// <param name="e"></param>
         public void Button_Map_Custom(object sender, RoutedEventArgs e)
         {
-            MapHandler.ShowMap($"Custom_{GetLocale()}");
+            MapHandler.ShowMap($"Customs_{GetLocale()}");
+        }
+        /// <summary>
+        /// 海关#彩蛋
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void Button_Map_Custom_Egg(object sender, RoutedEventArgs e)
+        {
+            MapHandler.ShowMap($"Customs_egg_{GetLocale()}");
         }
         /// <summary>
         /// 森林
@@ -147,7 +139,16 @@ namespace TarKov
         /// <param name="e"></param>
         public void Button_Map_Wood(object sender, RoutedEventArgs e)
         {
-            MapHandler.ShowMap($"Wood_{GetLocale()}");
+            MapHandler.ShowMap($"Woods_{GetLocale()}");
+        }
+        /// <summary>
+        /// 森林#彩蛋
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void Button_Map_Wood_Egg(object sender, RoutedEventArgs e)
+        {
+            MapHandler.ShowMap($"Woods_egg_{GetLocale()}");
         }
         /// <summary>
         /// 海岸线
@@ -159,6 +160,15 @@ namespace TarKov
             MapHandler.ShowMap($"Shoreline_{GetLocale()}");
         }
         /// <summary>
+        /// 海岸线
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void Button_Map_Shoreline2(object sender, RoutedEventArgs e)
+        {
+            MapHandler.ShowMap($"Shoreline2_{GetLocale()}");
+        }
+        /// <summary>
         /// 立交桥
         /// </summary>
         /// <param name="sender"></param>
@@ -166,6 +176,15 @@ namespace TarKov
         public void Button_Map_InterChange(object sender, RoutedEventArgs e)
         {
             MapHandler.ShowMap($"InterChange_{GetLocale()}");
+        }
+        /// <summary>
+        /// 立交桥#彩蛋
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void Button_Map_InterChange_Egg(object sender, RoutedEventArgs e)
+        {
+            MapHandler.ShowMap($"InterChange_egg_{GetLocale()}");
         }
         /// <summary>
         /// 实验室
@@ -184,6 +203,15 @@ namespace TarKov
         public void Button_Map_Reserve(object sender, RoutedEventArgs e)
         {
             MapHandler.ShowMap($"Reserve_{GetLocale()}");
+        }
+        /// <summary>
+        /// 储备站#地下
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void Button_Map_Reserve2(object sender, RoutedEventArgs e)
+        {
+            MapHandler.ShowMap($"Reserve2_{GetLocale()}");
         }
         public void Button_Help(object sender, RoutedEventArgs e)
         {

@@ -21,6 +21,21 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>x64</PlatformTarget>
@@ -163,7 +178,6 @@
     <Compile Include="Handlers\BrowserHandler.cs" />
     <Compile Include="Handlers\MapHandler.cs" />
     <Compile Include="Handlers\ScreenCapture.cs" />
-    <Compile Include="ImageProcessing\ImageSearch.cs" />
     <Compile Include="Handlers\AppHandler.cs" />
     <Compile Include="Handlers\InputHandler.cs" />
     <Compile Include="Handlers\OfferHandler.cs" />
@@ -204,34 +218,52 @@
     <Resource Include="favicon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="res\Reserve_kr.png" />
+    <Resource Include="Resources\Factory_zh.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="res\Custom_kr.png" />
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="res\InterChange_kr.png" />
+    <Resource Include="Resources\Customs_egg_zh.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="res\Wood_kr.png" />
+    <Resource Include="Resources\Customs_zh.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="res\Factory_en.jpg" />
+    <Resource Include="Resources\Woods_zh.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="res\Custom_en.jpg" />
+    <Resource Include="Resources\Woods_egg_zh.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="res\InterChange_en.jpg" />
+    <Resource Include="Resources\Shoreline2_zh.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="res\Reserve_en.jpg" />
+    <Resource Include="Resources\Shoreline_zh.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="res\Wood_en.jpg" />
+    <Resource Include="Resources\Interchange_egg_zh.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="res\Shoreline_en.jpg" />
+    <Resource Include="Resources\Interchange_zh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\TheLab_zh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Reserve_zh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Reserve2_zh.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

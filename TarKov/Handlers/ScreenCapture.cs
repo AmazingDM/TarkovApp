@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Drawing.Imaging;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Interop;
 using System.Windows.Media;
@@ -33,7 +28,7 @@ namespace TarKov.Handlers
                 BitmapSource p = Imaging.CreateBitmapSourceFromHBitmap(handle, IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
                 ImageBrush ib = new ImageBrush();
                 ib.ImageSource = p;
-                AppHandler.window.MapImage.Fill = ib;  
+                AppHandler.window.MapImage.Fill = ib;
             }
             catch (Exception)
             {

@@ -1,10 +1,4 @@
 ﻿using Gma.System.MouseKeyHook;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using TarKov.Handlers;
 
 public static class InputHelper
@@ -30,12 +24,12 @@ public static class InputHelper
     public static void OnMouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
     {
         mX = e.X;
-        mY = e.Y; 
+        mY = e.Y;
     }
     public static void OnKeyPressDown(object sender, System.Windows.Forms.KeyEventArgs e)
     {
-        if (e.Control) { InputHelper.EnableControlKey = true; } 
-    } 
+        if (e.Control) { InputHelper.EnableControlKey = true; }
+    }
     public static void OnKeyPressUp(object sender, System.Windows.Forms.KeyEventArgs e)
     {
         AppHandler.KeyUpEventHandler(sender, e);

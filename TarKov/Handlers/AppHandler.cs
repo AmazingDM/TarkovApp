@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
+﻿using System.Windows;
 using TarKov;
 
 public static class AppHandler
@@ -15,12 +8,12 @@ public static class AppHandler
     {
         window = target;
     }
-     
 
-    
+
+
     public static void KeyUpEventHandler(object sender, System.Windows.Forms.KeyEventArgs e)
     {
-         
+
         if (e.KeyCode == System.Windows.Forms.Keys.Insert)
         {
             if (window.Topmost == true)

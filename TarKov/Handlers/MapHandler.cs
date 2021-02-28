@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -29,6 +26,7 @@ public static class MapHandler
 
     public static void ShowMap(string mapName)
     {
+        mapName = mapName.ToLower();
         TarKov.MainWindow window = AppHandler.window;
         window.ChromiumBrowser.Visibility = Visibility.Hidden;
         window.MapImage.Visibility = Visibility.Visible;
@@ -38,22 +36,22 @@ public static class MapHandler
         var resourceNames = GetResourceNames();
         var b = false;
         foreach (var v in resourceNames)
-        { 
-            if (v == ("res/"+mapName.ToLower() + ".png") || v == ("res/" + mapName.ToLower() + ".jpg"))
-            { 
-                var extention = v.Split('.')[1]; 
-                imgBrush.ImageSource = new BitmapImage(new Uri($"pack://application:,,,/res/{mapName}.{extention}"));
+        {
+            if (v.ToLower().Contains(mapName))
+            {
+                var extention = v.Split('.')[1];
+                imgBrush.ImageSource = new BitmapImage(new Uri($"pack://application:,,,/{v}"));
                 b = true;
                 break;
-            } 
+            }
         }
-        if(b)
+        if (b)
         {
             window.MapImage.Fill = imgBrush;
         }
         else
-        { 
-            throw new System.IO.FileNotFoundException(mapName);
+        {
+            //throw new System.IO.FileNotFoundException(mapName);
         }
     }
     public static void HideAndBrowserShow()

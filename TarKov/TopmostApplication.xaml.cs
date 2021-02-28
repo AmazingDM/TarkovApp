@@ -120,31 +120,70 @@ namespace TarKov
         }
         public string GetLocale()
         {
-            return "en";
+            return "zh";
         }
-        public void Button_Map_Reserve(object sender, RoutedEventArgs e)
-        {
-            MapHandler.ShowMap($"Reserve_{GetLocale()}");
-        }
-        public void Button_Map_InterChange(object sender, RoutedEventArgs e)
-        {
-            MapHandler.ShowMap($"InterChange_{GetLocale()}");
-        }
-        public void Button_Map_Shoreline(object sender, RoutedEventArgs e)
-        {
-            MapHandler.ShowMap($"Shoreline_{GetLocale()}");
-        }
+        /// <summary>
+        /// 工厂
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void Button_Map_Factory(object sender, RoutedEventArgs e)
         {
             MapHandler.ShowMap($"Factory_{GetLocale()}");
         }
+        /// <summary>
+        /// 海关
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void Button_Map_Custom(object sender, RoutedEventArgs e)
         {
             MapHandler.ShowMap($"Custom_{GetLocale()}");
         }
+        /// <summary>
+        /// 森林
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void Button_Map_Wood(object sender, RoutedEventArgs e)
         {
             MapHandler.ShowMap($"Wood_{GetLocale()}");
+        }
+        /// <summary>
+        /// 海岸线
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void Button_Map_Shoreline(object sender, RoutedEventArgs e)
+        {
+            MapHandler.ShowMap($"Shoreline_{GetLocale()}");
+        }
+        /// <summary>
+        /// 立交桥
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void Button_Map_InterChange(object sender, RoutedEventArgs e)
+        {
+            MapHandler.ShowMap($"InterChange_{GetLocale()}");
+        }
+        /// <summary>
+        /// 实验室
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void Button_Map_TheLab(object sender, RoutedEventArgs e)
+        {
+            MapHandler.ShowMap($"TheLab_{GetLocale()}");
+        }
+        /// <summary>
+        /// 储备站
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void Button_Map_Reserve(object sender, RoutedEventArgs e)
+        {
+            MapHandler.ShowMap($"Reserve_{GetLocale()}");
         }
         public void Button_Help(object sender, RoutedEventArgs e)
         {

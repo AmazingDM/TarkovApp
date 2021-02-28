@@ -39,7 +39,7 @@ namespace TarKov
             InitializeComponent();
             AllocConsole();
             Setup();
-            ChromeInit("https://tarkov-market.com/");
+            ChromeInit("https://github.com/AmazingDM/TarkovApp");
             InputHelper.Init();
             AppHandler.Init(this);
         }
@@ -148,7 +148,7 @@ namespace TarKov
         }
         public void Button_Help(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(" Insert : Close/Open \n ESC : Close \n Same Button Double Click : Return to Original URL","shlifedev@gmail.com", MessageBoxButton.OK);
+            MessageBox.Show(" Insert 键: 关闭/开启 \n ESC : 关闭 \n 相同按钮双击 : 返回原始网址", "amazingdmdd@gmail.com", MessageBoxButton.OK);
         }
 
         private void HideMap(object sender, RoutedEventArgs e)

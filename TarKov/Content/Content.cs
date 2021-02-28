@@ -29,11 +29,11 @@ public static class BrowserHelper
     public static Dictionary<EContent, BrowserData> ContentMap = new Dictionary<EContent, BrowserData>(); 
     public static void Init()
     { 
-        ContentMap.Add(EContent.QUEST, new BrowserData("https://escapefromtarkov.gamepedia.com/Quests", 1000));
-        ContentMap.Add(EContent.ARMOR, new BrowserData("https://escapefromtarkov.gamepedia.com/Armor_vests",1000));
-        ContentMap.Add(EContent.MARKET, new BrowserData("https://tarkov-market.com/", 800));
-        ContentMap.Add(EContent.AMMO, new BrowserData("https://escapefromtarkov.gamepedia.com/Ballistics", 1000));
-        ContentMap.Add(EContent.WEAPON, new BrowserData("https://escapefromtarkov.gamepedia.com/Weapons", 1000));
+        ContentMap.Add(EContent.QUEST, new BrowserData("https://escapefromtarkov-zh.gamepedia.com/Quests", 1000));
+        ContentMap.Add(EContent.ARMOR, new BrowserData("https://escapefromtarkov-zh.gamepedia.com/Armor_vests", 1000));
+        ContentMap.Add(EContent.MARKET, new BrowserData("https://tarkov-market.com/cn/", 800));
+        ContentMap.Add(EContent.AMMO, new BrowserData("https://escapefromtarkov-zh.gamepedia.com/Ballistics", 1000));
+        ContentMap.Add(EContent.WEAPON, new BrowserData("https://escapefromtarkov-zh.gamepedia.com/Weapons", 1000));
     } 
 
     

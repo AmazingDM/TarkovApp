@@ -28,9 +28,9 @@ namespace TarKov
         }
         void Setup()
         {
-            this.Topmost = true;
-            var _width = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width;
-            var _height = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
+            this.Topmost = true;    
+            var _width = SystemParameters.PrimaryScreenWidth;
+            var _height = SystemParameters.PrimaryScreenHeight;
             this.Width = _width;
             this.Height = _height;
             this.AppGrid.Width = _width;

@@ -30,7 +30,7 @@
         <Button Grid.Column="0" Grid.Row="0" Content="武器" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="26" Foreground="White" Background="#672EFF00" Click="Button_Weapons" Margin="0,45,0,0" BorderBrush="#0200FF17"/>
         <Button Grid.Column="0" Grid.Row="0" Content="护甲" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="24" Foreground="White" Background="#67008BFF" Click="Button_Armor" Margin="0,69,0,0" BorderBrush="#0200FF17"/>
 
-        <Label Grid.Column="0" Content="原著shlifedev&#xA;当前维护AmazingDM&#xD;&#xA;V1.2" VerticalAlignment="Top" Foreground="White" Height="90" FontFamily="Segoe Print" Background="#00000000" Margin="0,135,0,0" RenderTransformOrigin="0.5,0.5">
+        <Label Grid.Column="0" Content="原著shlifedev&#xA;汉化维护AmazingDM&#xA;V1.3" VerticalAlignment="Top" Foreground="White" Height="90" FontFamily="Segoe Print" Background="#00000000" Margin="0,135,0,0" RenderTransformOrigin="0.5,0.5">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -52,8 +52,8 @@
         <Button Content="海岸线"   VerticalAlignment="Top"  Height="30" Foreground="White" Background="#BFFF8B00" FontSize="17" Click="Button_Map_Shoreline" Margin="0,315,70,0" BorderBrush="#0200FF17"/>
         <Button Content="工厂"  Height="30" Foreground="White" Background="#BF79FFED" FontSize="17" Click="Button_Map_Factory" BorderBrush="#0200FF17" Margin="0,225,0,0" VerticalAlignment="Top"/>
         <Button Content="实验室"   VerticalAlignment="Top"  Height="30" Foreground="White" Background="#BF630000" FontSize="17" Click="Button_Map_TheLab" BorderBrush="#0200FF17" Margin="2,375,2,0"/>
-        <Button Content="疗养院"   VerticalAlignment="Top"  Height="30" Foreground="White" Background="#BFFF8B00" FontSize="17" Click="Button_Map_Shoreline2" Margin="63,315,0,0" BorderBrush="#0200FF17"/>
-        <Button Content="彩蛋"   VerticalAlignment="Top"  Height="30" Foreground="White" Background="#BFB37FFF" FontSize="17" Click="Button_Map_Custom_Egg" Margin="47,255,2,0" BorderBrush="#0200FF17"/>
+        <Button Content="疗养院"   VerticalAlignment="Top"  Height="30" Foreground="White" Background="#BFFF8B00" FontSize="17" Click="Button_Map_Shoreline2" Margin="65,315,0,0" BorderBrush="#0200FF17"/>
+        <Button Content="彩蛋"   VerticalAlignment="Top"  Height="30" Foreground="White" Background="#BFB37FFF" FontSize="17" Click="Button_Map_Custom_Egg" Margin="47,255,0,0" BorderBrush="#0200FF17"/>
         <Button Content="彩蛋"   VerticalAlignment="Top"  Height="30" Foreground="White" Background="#BF45FF28" FontSize="17" Click="Button_Map_Wood_Egg" Margin="47,285,0,0" BorderBrush="#0200FF17" RenderTransformOrigin="-0.488,0.5"/>
         <Button Content="立交桥"   VerticalAlignment="Top"  Height="30" Foreground="White" Background="#BF002F66" FontSize="17" Click="Button_Map_InterChange" Margin="2,345,72,0" BorderBrush="#0200FF17" RenderTransformOrigin="1,0.5"/>
         <Button Content="彩蛋"   VerticalAlignment="Top"  Height="30" Foreground="White" Background="#BF002F66" FontSize="17" Click="Button_Map_InterChange_Egg" Margin="63,345,2,0" BorderBrush="#0200FF17" RenderTransformOrigin="1,0.5"/>
